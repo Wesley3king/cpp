@@ -15,5 +15,9 @@ int main() {
     srand(NULL);
     int num = rand()%100;
     cout << "numero :" << num;
+
+    //      exit 
+    exit(EXIT_SUCCESS);// EXIT_SUCCESS => 0 , EXIT_FAILURE => 1
+    cout << "comando final";
     return 0;
 }
