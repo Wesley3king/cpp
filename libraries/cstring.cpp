@@ -36,6 +36,29 @@ int main () {
     int res = strcmp(text1.str, txt3);
     cout << "strcmp : " << res << endl;
 
+    // memchr -search
+    char * result;
+    char texto[] = "all that i needed, was the only thing i could't find";
+    char pesquisa[] = "h";
 
+    result = (char *) memchr(texto, 3, strlen(texto)); // don t work
+
+    //cout << "memchr : " << result << endl;
+
+    //  strchr
+    // result = strchr(); don t work
+
+    // strcspn
+    int i =  strspn(texto, pesquisa);
+
+    cout << "strspn : " << i << endl;
+
+
+    result = NULL;
+    result = strtok(texto, "h");
+    while (result != NULL) {
+        cout << result << endl;
+        result = strtok(NULL, "h");
+    }
     return 0;
 }
